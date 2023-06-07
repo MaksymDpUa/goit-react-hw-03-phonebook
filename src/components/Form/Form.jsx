@@ -28,7 +28,7 @@ export class Form extends Component {
     }
 
     const id = nanoid();
-    this.props.addContact([{ name, id, number }]);
+    this.props.addContact([{ name, id, number: Number(number) }]);
 
     this.setState({ name: '', number: '' });
   };
